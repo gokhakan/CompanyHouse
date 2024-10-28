@@ -1,11 +1,11 @@
-package com.Company.pages;
+package com.company.pages;
 
-import com.Company.utilities.Driver;
+import com.company.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class ProductsPage extends LoginPage{
+public class ProductsPage extends LoginPage {
     public ProductsPage(){
         PageFactory.initElements(Driver.get(), this);
     }
