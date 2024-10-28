@@ -10,6 +10,6 @@ public class YourCartPage {
         PageFactory.initElements(Driver.get(), this);
     }
 
-    @FindBy(id = "checkout")
+    @FindBy(xpath = "//a[@class='btn_action checkout_button']")
     public WebElement checkout;
 }

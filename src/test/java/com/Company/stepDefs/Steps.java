@@ -41,17 +41,17 @@ public class Steps {
                 assertEquals(expectedProductURL, actualURL);
                 break;
             case "Checkout: Your Information":
-                String expectedCheckoutURL = "https://www.saucedemo.com/checkout-step-one.html";
+                String expectedCheckoutURL = "https://www.saucedemo.com/v1/checkout-step-one.html";
                 String actualcheckoutURL = Driver.get().getCurrentUrl();
                 assertEquals(expectedCheckoutURL, actualcheckoutURL);
                 break;
             case "Overview":
-                String expectedOverviewURL = "https://www.saucedemo.com/checkout-step-two.html";
+                String expectedOverviewURL = "https://www.saucedemo.com/v1/checkout-step-two.html";
                 String actualOverviewURL = Driver.get().getCurrentUrl();
                 assertEquals(expectedOverviewURL, actualOverviewURL);
                 break;
             case "Complete":
-                String expectedCompleteURL = "https://www.saucedemo.com/checkout-complete.html";
+                String expectedCompleteURL = "https://www.saucedemo.com/v1/checkout-complete.html";
                 String actualCompleteURL = Driver.get().getCurrentUrl();
                 assertEquals(expectedCompleteURL, actualCompleteURL);
             default:
@@ -112,7 +112,7 @@ public class Steps {
 
     @Then("user sees the {string} for the {string}")
     public void user_sees_the_for_the(String rightPrice, String item) {
-        String expectedBAckpackPrice = "$29.99";
+        String expectedBAckpackPrice = "29.99";
         String actualBackpackPrice = productsPage.price.getText();
         assertEquals(expectedBAckpackPrice, actualBackpackPrice);
     }
